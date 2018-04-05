@@ -55,7 +55,7 @@ def signup():
         password_error = 'Not a valid password'
         password = ''
 
-    if confirm != password :
+    if confirm != password  :
         confirm_error = 'Password doesnt match'
         confirm = ''
 

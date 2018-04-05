@@ -4,58 +4,62 @@
 
             <title>New User Registration</title>
         <style>
-                    .error { color: red; }
-                       
+                    .error { color: red; 
+                           }
+                    tbody   {
+                             display: inline-block;
+                             margin: 8px;
+                            }
+                    
+                    
+                    
         </style>
     </head>
     <body>
-        <h2>NEW USER SIGNUP</h2>
+        <h1 style ="text-align:center;color:blue">NEW USER SIGNUP</h1>
+        <hr/>
         <form action="/user" method="POST">
            <table>
                 <tbody>
                     <tr>
                       <td>
-                          <label>Enter Username
+                          <label><b>Enter Username</b>  </label>
+                      </td>
+                      <td>
                           <input name="user_name" type="text" value='{{user_name}}'  />
-                          </label>
-                       </td>
-                       <td>
-                            <p class="error">{{user_error}}</p>
+                          <span class="error">{{user_error}}</span>
                        </td>
                      </tr>
                      <tr>
                        <td>
-                           <label>Enter Password
-                           <input name="password" type="password" value='{{password}}' />
-                            </label>
+                           <label><b>Enter Password</b>  </label>
                        </td>
                        <td>
-                            <p class="error">{{password_error}}</p>
+                           <input name="password" type="password" value='{{password}}'  />
+                           <span class="error">{{password_error}}</span>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>
+                            <label><b>Enter Password</b>  </label>
+                       </td>
+                       <td>
+                          <input name="confirm" type="password" value='{{confirm}}'  />
+                          <span class="error">{{confirm_error}}</span>
+                       </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <label><b>Enter Email(Optional)</b>  </label>
+                        </td>
+                        <td>
+                           <input name="email" type="text" value='{{email}}'  />
+                           <span class="error">{{email_error}}</span>
                         </td>
                      </tr>
-                     <tr>
-                         <td>
-                            <label>Confirm Password
-                             <input name="confirm" type="password" value='{{confirm}}' />
-                            </label>
-                          </td>
-                          <td>
-                              <p class="error">{{confirm_error}}</p>
-                           </td>
-                      </tr>
-                       <tr>
-                          <td>
-                              <label>Enter Email(Optional)
-                               <input name="email" type="text" value='{{email}}' />
-                              </label>
-                           </td>
-                            <td>
-                               <p class="error">{{email_error}}</p>
-                             </td>
-                        </tr>
                 </tbody>
             </table>
-            <input type="submit">
+            <input type="submit" value="Signup"></input>
         </form>           
 
    
